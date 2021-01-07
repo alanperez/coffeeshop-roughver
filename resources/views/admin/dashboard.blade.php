@@ -4,8 +4,8 @@
 
 @section('content')
 
-            <div class="dashboard-ecommerce">
-                <!-- <div class="container-fluid dashboard-content ">
+            <!-- <div class="dashboard-ecommerce">
+                <div class="container-fluid dashboard-content ">
                     <!-- ============================================================== -->
                     <!-- pageheader  -->
                     <!-- ============================================================== -->
@@ -524,7 +524,7 @@
                             <!-- ============================================================== -->
                         </div>
                     </div>
-                </div> -->
-            </div>
+                </div>
+            </div> -->
 
 @endsection
