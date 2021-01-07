@@ -1,0 +1,77 @@
+
+
+.welcome-jumbo {
+    transform: translate3d(300px, 0, 0);
+    max-width: calc(100vw - 300px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#3ea0f7+0,0971ce+100 */
+    background: #3ea0f7; /* Old browsers */
+    background: -moz-linear-gradient(top,  #3ea0f7 0%, #0971ce 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #3ea0f7 0%,#0971ce 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #3ea0f7 0%,#0971ce 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3ea0f7', endColorstr='#0971ce',GradientType=0 ); /* IE6-9 */
+    overflow: hidden;
+    padding: 100px;
+
+    .status {
+        display: inline-block;
+        padding: 10px 15px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: white;
+        background: black;
+        border-radius: 5px;
+        align-self: flex-start;
+        margin-bottom: 20px;
+    }
+   h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    align-self: flex-start;
+    color: white;
+    margin-bottom: 100px;
+   }
+       .coffee {
+        //    width: 100%;
+        //    max-width: 1000px;
+        //    animation: moveUpandDown 1s linear infinite;
+           position: relative;
+       }
+    //    @keyframes moveUpandDown {
+    //        0%, 100% {
+    //            bottom: 0;
+    //        }
+    //        50% {
+    //         bottom: 30px;
+    //     }
+    //    }
+}
+
+
+
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+
+    .side-menu  {
+        // color: black;
+    }
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+}
