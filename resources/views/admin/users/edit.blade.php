@@ -20,12 +20,21 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item">
-                                    <a href="/admin" class="breadcrumb-link">Dashboard</a>
+                                    <a href="/admin" class="breadcrumb-link"
+                                        >Dashboard</a
+                                    >
                                 </li>
                                 <li class="breadcrumb-item">
-                                    <a href="/admin/users" class="breadcrumb-link">All Users</a>
+                                    <a
+                                        href="/admin/users"
+                                        class="breadcrumb-link"
+                                        >All Users</a
+                                    >
                                 </li>
-                                <li class="breadcrumb-item active" aria-current="page">
+                                <li
+                                    class="breadcrumb-item active"
+                                    aria-current="page"
+                                >
                                     Edit User
                                 </li>
                             </ol>
@@ -38,7 +47,6 @@
         <!-- end pageheader -->
         <!-- ============================================================== -->
 
-
         <div class="row">
             <!-- ============================================================== -->
             <!-- basic form -->
@@ -48,14 +56,20 @@
                     <h5 class="card-header">Edit User</h5>
                     <div class="card-body">
                         <form method="POST" action="/admin/users/{{$user->id}}">
-                            @csrf
-                            @method('PUT')
+                            @csrf @method('PUT')
                             <div class="form-group">
                                 <label for="inputFirstName">First Name</label>
-                                <input id="inputFirstName" type="text"
+                                <input
+                                    id="inputFirstName"
+                                    type="text"
                                     class="form-control form-control-lg @error('fname') is-invalid @enderror"
-                                    name="fname" value="{{ old('fname', $user->fname) }}" required autocomplete="name" autofocus
-                                    placeholder="First Name" />
+                                    name="fname"
+                                    value="{{ old('fname', $user->fname) }}"
+                                    required
+                                    autocomplete="name"
+                                    autofocus
+                                    placeholder="First Name"
+                                />
 
                                 @error('fname')
                                 <span class="invalid-feedback" role="alert">
@@ -65,10 +79,17 @@
                             </div>
                             <div class="form-group">
                                 <label for="inputLastName">Last Name</label>
-                                <input id="inputLastName" type="text"
+                                <input
+                                    id="inputLastName"
+                                    type="text"
                                     class="form-control form-control-lg @error('lname') is-invalid @enderror"
-                                    name="lname" value="{{ old('lname', $user->lname) }}" required autocomplete="name" autofocus
-                                    placeholder="Last Name" />
+                                    name="lname"
+                                    value="{{ old('lname', $user->lname) }}"
+                                    required
+                                    autocomplete="name"
+                                    autofocus
+                                    placeholder="Last Name"
+                                />
 
                                 @error('lname')
                                 <span class="invalid-feedback" role="alert">
@@ -78,10 +99,16 @@
                             </div>
                             <div class="form-group">
                                 <label for="inputEmail">Email</label>
-                                <input id="inputEmail" type="email"
+                                <input
+                                    id="inputEmail"
+                                    type="email"
                                     class="form-control form-control-lg @error('email') is-invalid @enderror"
-                                    name="email" value="{{ old('email', $user->email) }}" required autocomplete="email"
-                                    placeholder="Email" />
+                                    name="email"
+                                    value="{{ old('email', $user->email) }}"
+                                    required
+                                    autocomplete="email"
+                                    placeholder="Email"
+                                />
 
                                 @error('email')
                                 <span class="invalid-feedback" role="alert">
@@ -91,9 +118,15 @@
                             </div>
                             <div class="form-group">
                                 <label for="inputPassword">Password</label>
-                                <input id="inputPassword" type="password"
+                                <input
+                                    id="inputPassword"
+                                    type="password"
                                     class="form-control form-control-lg @error('password') is-invalid @enderror"
-                                    name="password" required autocomplete="new-password" placeholder="Password" />
+                                    name="password"
+                                    required
+                                    autocomplete="new-password"
+                                    placeholder="Password"
+                                />
 
                                 @error('password')
                                 <span class="invalid-feedback" role="alert">
@@ -103,26 +136,45 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="inputPassword">Confirm Password</label>
-                                <input id="inputPassword" type="password" class="form-control form-control-lg"
-                                    name="password_confirmation" required autocomplete="new-password"
-                                    placeholder="Confirm Password" />
+                                <label for="inputPassword"
+                                    >Confirm Password</label
+                                >
+                                <input
+                                    id="inputPassword"
+                                    type="password"
+                                    class="form-control form-control-lg"
+                                    name="password_confirmation"
+                                    required
+                                    autocomplete="new-password"
+                                    placeholder="Confirm Password"
+                                />
                             </div>
 
                             <div class="form-group">
                                 <label for="inputRole">Role</label>
-                                <select name="role_id" class="form-control" id="inputRole">
+                                <select
+                                    name="role_id"
+                                    class="form-control"
+                                    id="inputRole"
+                                >
                                     @foreach ($roles as $role)
-                                    <option value="{{$role->id}}" @if ($role->title == 'Employee') selected @endif
-                                        >{{$role->title}}</option>
+                                    <option value="{{$role->id}}" @if ($role-
+                                        >title == 'Employee') selected @endif
+                                        >{{$role->title}}</option
+                                    >
                                     @endforeach
                                 </select>
                             </div>
                             <div class="row">
-                                <div class="col-sm-6 pb-2 pb-sm-4 pb-lg-0 pr-0"></div>
+                                <div
+                                    class="col-sm-6 pb-2 pb-sm-4 pb-lg-0 pr-0"
+                                ></div>
                                 <div class="col-sm-6 pl-0">
                                     <p class="text-right">
-                                        <button type="submit" class="btn btn-space btn-primary">
+                                        <button
+                                            type="submit"
+                                            class="btn btn-space btn-primary"
+                                        >
                                             Submit
                                         </button>
                                     </p>
@@ -151,7 +203,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                    Copyright © 2018 Concept. All rights reserved. Dashboard by
+                    Copyright © 2021 Concept. All rights reserved. Dashboard by
                     <a href="https://colorlib.com/wp/">Colorlib</a>.
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
